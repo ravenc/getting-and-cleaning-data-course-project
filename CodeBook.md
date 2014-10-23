@@ -1,6 +1,6 @@
-Coursera Getting and Cleaning Data class
-======================
-Course Project Codebook
+# Coursera Getting and Cleaning Data class
+
+## Course Project Codebook
 =========================
 
 
@@ -19,12 +19,12 @@ Read in the data from files: X_train, X_test, Y_train, Y_test, features.txt, act
 
 The first variable "subject" is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
 The second variable "activity" is the activity performed by the subject. There are six types of activity:  
-	Walking
-	Walking Upstairs
-	Walking Downstairs
-	Sitting
-	Standing
-	Laying
+	* Walking
+	* Walking Upstairs
+	* Walking Downstairs
+	* Sitting
+	* Standing
+	* Laying
 
 The remaining 66 variables are the extracted measurements on the mean and standard deviation for each measurment (named as in the original study features_info.txt" file): 
 tBodyAcc-XYZ
