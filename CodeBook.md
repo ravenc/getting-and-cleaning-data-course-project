@@ -26,24 +26,24 @@ The first variable "subject" is the number of the subject who performed the acti
 	* Standing
 	* Laying
 
-The remaining 66 variables are the extracted measurements on the mean and standard deviation for each measurment (named as in the original study features_info.txt" file): 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+* The remaining 66 variables are the extracted measurements on the mean and standard deviation for each measurment (named as in the original study features_info.txt" file): 
+	* tBodyAcc-XYZ
+	* tGravityAcc-XYZ
+	* tBodyAccJerk-XYZ
+	* tBodyGyro-XYZ
+	* tBodyGyroJerk-XYZ
+	* tBodyAccMag
+	* tGravityAccMag
+	* tBodyAccJerkMag
+	* tBodyGyroMag
+	* tBodyGyroJerkMag
+	* fBodyAcc-XYZ
+	* fBodyAccJerk-XYZ
+	* fBodyGyro-XYZ
+	* fBodyAccMag
+	* fBodyAccJerkMag
+	* fBodyGyroMag
+	* fBodyGyroJerkMag
 where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 
@@ -53,8 +53,8 @@ STEP 2. "Extracts only the measurements on the mean and standard deviation for e
 
 Mean and standard deviation measurments there extracted using subset() and grepl() functions.
 
-"meanFreq" measurements, such as "fBodyAcc-meanFreq()-X" and "fBodyGyro-meanFreq()-Y", defined in the original study "features_info.txt" file as "weighted average of the frequency components to obtain a mean frequency" were not extracted because, in my understanding, these are different from mean variables.
-"angle" measurements, such as "angle(tBodyAccMean,gravity)" and "angle(X,gravityMean)",  defined in the original study "features_info.txt" file as "angle between to vectors" were not extracted because, in my understanding, these are different from mean variables.
+	* "meanFreq" measurements, such as "fBodyAcc-meanFreq()-X" and "fBodyGyro-meanFreq()-Y", defined in the original study "features_info.txt" file as "weighted average of the frequency components to obtain a mean frequency" were not extracted because, in my understanding, these are different from mean variables.
+	* "angle" measurements, such as "angle(tBodyAccMean,gravity)" and "angle(X,gravityMean)",  defined in the original study "features_info.txt" file as "angle between to vectors" were not extracted because, in my understanding, these are different from mean variables.
 
 66 features were extracted, out of a total of 561.
 
