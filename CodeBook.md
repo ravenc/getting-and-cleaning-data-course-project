@@ -1,12 +1,9 @@
-a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
+Coursera Getting and Cleaning Data class. 
+Course Project Codebook
+=========================
 
 
-A full description of the study is available at the site where the data was obtained:
-
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-
-
-The data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+The oroginal study data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. (A full description of the study is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones .)
 It was unpacked to the working R directory.
 
 The R script "run_analysis.R" does the following:
@@ -21,12 +18,12 @@ Read in the data from files: X_train, X_test, Y_train, Y_test, features.txt, act
 
 The first variable "subject" is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
 The second variable "activity" is the activity performed by the subject. There are six types of activity:  
-Walking
-Walking Upstairs
-Walking Downstairs
-Sitting
-Standing
-Laying
+	Walking
+	Walking Upstairs
+	Walking Downstairs
+	Sitting
+	Standing
+	Laying
 
 The remaining 66 variables are the extracted measurements on the mean and standard deviation for each measurment (named as in the original study features_info.txt" file): 
 tBodyAcc-XYZ
