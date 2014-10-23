@@ -7,16 +7,16 @@ This repository contains output files for Coursera Getting and Cleaning Data Cou
 
 ## Tidy dataset
 
-The tidy dataset "course-project.txt" can be read into R using read.table() function.
+The tidy dataset `course-project.txt` can be read into R using `read.table()` function.
 
 
-## R scipt "run_analysis.R"
+## R scipt `run_analysis.R`
 
-The script can be run using source() function.
+The script can be run using `source()` function.
 
 #### Prerequisites:
 1. It is assumed that the original study dataset is already downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and uzipped into the working R directory.
-1. The script uses a dplyr package. If the package is missing, it has to be downloaded and installed using a 'install.packages()' function.
+1. The script uses a dplyr package. If the package is missing, it has to be downloaded and installed using a `install.packages()` function.
 
 #### The script contains the code needed to perform a 5 step data transformation, as described in the project assignment: 
 1. Merges the training and the test sets to create one data set.
@@ -30,4 +30,4 @@ Note: Explanation of steps 3 and 4 transformations, which required subjective ju
 
 ## CodeBook
 
-CodeBook.md gives a description of the variables, the data and the transformations made to clean up the data.
+`CodeBook.md` gives a description of the variables, the data and the transformations made to clean up the data.
