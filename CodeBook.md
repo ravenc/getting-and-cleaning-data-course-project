@@ -16,9 +16,9 @@ Second, the two objects/dataframes are merged into one, named `united`, using `r
 
 Read in the data from files: `X_train`, `X_test`, `Y_train`, `Y_test`, `features.txt`, `activities.txt`, 
 
-* The first variable "subject" is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
+* The first variable `subject` is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
 
-* The second variable "activity" is the activity performed by the subject. There are six types of activity:  
+* The second variable `activity` is the activity performed by the subject. There are six types of activity:  
 	* Walking
 	* Walking Upstairs
 	* Walking Downstairs
