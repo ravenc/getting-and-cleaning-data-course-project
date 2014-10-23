@@ -3,11 +3,14 @@ Coursera Getting and cleaning data Course Project
 
 
 Tidy dataset
+============
 The tidy dataset "course-project.txt" can be read into R using read.table() function.
 
 
 R scipt "run_analysis.R"
+=================
 The script can be run using source() function.
+
 Prerequisites:
 1. It is assumed that the original study dataset is already downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and uzipped into the working R directory.
 2. The script uses a dplyr package. If the package is missing, it has to be downloaded and installed using a install.packages() function.
@@ -23,4 +26,5 @@ Note: Explanation of step 3 and 4 transformations, which required subjective jud
 
 
 CodeBook
+========
 File CodeBook.md gives a description of the variables, the data and the transformations made to clean up the data.
