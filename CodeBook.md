@@ -8,7 +8,7 @@ It was unpacked to the working R directory.
 
 The R script "run_analysis.R" does the following:
 
-* STEP 1. "Merges the training and the test sets to create one data set."
+## STEP 1. "Merges the training and the test sets to create one data set."
 
 First, the corresponding data files are read into R using read.table() function and asigned to "train" and "test" objects, accordingly.
 Second, the two objects/dataframes are merged into one, named "united", using rbind() function.
@@ -16,7 +16,8 @@ Second, the two objects/dataframes are merged into one, named "united", using rb
 
 Read in the data from files: 'X_train', 'X_test', 'Y_train', 'Y_test', 'features.txt', 'activities.txt', 
 
-The first variable "subject" is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
+* The first variable "subject" is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
+
 * The second variable "activity" is the activity performed by the subject. There are six types of activity:  
 	* Walking
 	* Walking Upstairs
@@ -48,7 +49,7 @@ where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 
 
-STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
+## STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
 
 Mean and standard deviation measurments there extracted using subset() and grepl() functions.
 
@@ -63,7 +64,8 @@ Activity names from "activity_labels.txt" file were assigned using gsub() functi
 
 
 ## STEP 4. "Appropriately labels the data set with descriptive variable names" 
-The following naming convention was followed:
+
+* The following naming convention was followed:
 1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' reccommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
 1. CamelCase (my prefered way for easier readability);
 1. "BodyBody" was changed to "Body";
