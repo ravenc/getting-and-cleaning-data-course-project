@@ -9,7 +9,7 @@ The donwloaded dataset was unzipped to the working R directory.
 
 The R script `run_analysis.R` does the following:
 
-### STEP 1. "Merges the training and the test sets to create one data set."
+#### STEP 1. "Merges the training and the test sets to create one data set."
 
 * Read in the data from files using `read.table()` function: 
 	* measurement: `X_train.txt`, `X_test.txt` and row-bind using `rbind()` function.
@@ -19,7 +19,7 @@ The R script `run_analysis.R` does the following:
 	* activity names `activities.txt` 
 
 
-### STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
+#### STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
 
 Mean and standard deviation measurments there extracted using `subset()` and `grepl()` functions.
 
@@ -29,7 +29,7 @@ Mean and standard deviation measurments there extracted using `subset()` and `gr
 66 features were extracted, out of a total of 561.
 
 
-### Variables
+##### Variables
 
 There are 68 variables in the new set:
 * The first variable `subject` is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
@@ -64,13 +64,13 @@ There are 68 variables in the new set:
 where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 
-### STEP 3. "Uses descriptive activity names to name the activities in the data set" 
+#### STEP 3. "Uses descriptive activity names to name the activities in the data set" 
 Activity names from `activity_labels.txt` file were assigned using gsub() function.
 
 
-### STEP 4. "Appropriately labels the data set with descriptive variable names" 
+#### STEP 4. "Appropriately labels the data set with descriptive variable names" 
 
-#### Naming convention
+##### Naming convention
 * The following naming convention was followed:
 1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' reccommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
 1. CamelCase (my prefered way for easier readability);
@@ -86,7 +86,7 @@ Activity names from `activity_labels.txt` file were assigned using gsub() functi
 After the above mentioned tranformations the data set has 10299 rows (observations) and 68 columns (variables).
 
 
-### STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
+#### STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
 
 First, `dplyr()` package was used: function `group_by()` to group the data by both subject and activity.
 Then function `summarise_each()` to calculate the average of each variable for each activity and each subject.
@@ -95,7 +95,8 @@ The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (`sub
 
 Second, the result of the first part was saved to a new file `course-project.txt` in the working direcory using `write.table()` function.
 
-===
+
+#### Reading in the new tidy file and R script
 
 The new tidy set file `course-project.txt` can be read into R using `read.table("course-project.txt")`.
 The R script can be downloaded to your computer's R working directory and then can run it by the following command: `source('./run_analysis.R')`.
