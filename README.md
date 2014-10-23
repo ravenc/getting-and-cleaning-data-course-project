@@ -1,2 +1,26 @@
-getting-and-cleaning-data-course-project
+Coursera Getting and cleaning data Course Project
 ========================================
+
+
+Tidy dataset
+The tidy dataset "course-project.txt" can be read into R using read.table() function.
+
+
+R scipt "run_analysis.R"
+The script can be run using source() function.
+Prerequisites:
+1. It is assumed that the original study dataset is already downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and uzipped into the working R directory.
+2. The script uses a dplyr package. If the package is missing, it has to be downloaded and installed using a install.packages() function.
+
+The script contains the code needed to perform a 5 step data transformation, as described in the project assignment: 
+   1. Merges the training and the test sets to create one data set.
+   2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+   3. Uses descriptive activity names to name the activities in the data set
+   4. Appropriately labels the data set with descriptive variable names. 
+   5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Note: Explanation of step 3 and 4 transformations, which required subjective judgment/discretion, is given in the CodeBook.
+
+
+CodeBook
+File CodeBook.md gives a description of the variables, the data and the transformations made to clean up the data.
