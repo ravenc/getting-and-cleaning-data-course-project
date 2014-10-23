@@ -7,7 +7,7 @@
 * The original study data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. (A full description of the study is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones .)
 * It was unpacked to the working R directory.
 
-*The R script "run_analysis.R" does the following:
+* The R script "run_analysis.R" does the following:
 
 * STEP 1. "Merges the training and the test sets to create one data set."
 
@@ -15,7 +15,7 @@ First, the corresponding data files are read into R using read.table() function 
 Second, the two objects/dataframes are merged into one, named "united", using rbind() function.
 
 
-Read in the data from files: X_train, X_test, Y_train, Y_test, features.txt, activities.txt, 
+Read in the data from files: 'X_train', 'X_test', 'Y_train', 'Y_test', 'features.txt', 'activities.txt', 
 
 The first variable "subject" is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
 * The second variable "activity" is the activity performed by the subject. There are six types of activity:  
@@ -44,8 +44,8 @@ The first variable "subject" is the number of the subject who performed the acti
 	* fBodyAccJerkMag
 	* fBodyGyroMag
 	* fBodyGyroJerkMag
-where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
+where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 
 
@@ -73,8 +73,8 @@ The following naming convention was followed:
 gsub() function (with regular expression pattern replacement) was used to make the needed variable names' transformations.
 
 Examples:
-"tBodyAcc-mean()-X" was transformed to "timeBodyAccelerationMeanX"
-"fBodyBodyGyroJerkMag-std()" was transformed to "frequencyBodyGyroscopeJerkMagnitudeStandardDeviation"
+	* 'tBodyAcc-mean()-X' was transformed to "timeBodyAccelerationMeanX"
+	* "fBodyBodyGyroJerkMag-std()" was transformed to "frequencyBodyGyroscopeJerkMagnitudeStandardDeviation"
 
 
 After the above mentioned tranformations the data set has 10299 rows (observations) and 68 columns (variables).
