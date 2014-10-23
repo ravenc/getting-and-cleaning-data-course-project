@@ -1,4 +1,5 @@
-Coursera Getting and Cleaning Data class. 
+Coursera Getting and Cleaning Data class
+---------
 Course Project Codebook
 =========================
 
