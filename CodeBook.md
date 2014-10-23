@@ -11,11 +11,12 @@ The R script `run_analysis.R` does the following:
 
 ### STEP 1. "Merges the training and the test sets to create one data set."
 
-First, the corresponding data files are read into R using `read.table()` function and asigned to `train` and `test` objects, accordingly.
-Second, the two objects/dataframes are merged into one, named `united`, using `rbind()` function.
-
-
-Read in the data from files: `X_train`, `X_test`, `Y_train`, `Y_test`, `features.txt`, `activities.txt`, 
+Read in the data from files using `read.table()` function: 
+	* measurement: `X_train.txt`, `X_test.txt` and row-bind using `rbind()` function.
+	* activity: `Y_train.txt`, `Y_test.txt` and row-bind using `rbind()` function.
+	* subject: `subject_train.txt`, `subject_test.txt` and row-bind using `rbind()` function.
+	* features `features.txt` 
+	* activity names `activities.txt` 
 
 
 ### STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
@@ -63,7 +64,6 @@ There are 68 variables in the new set:
 where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 
-
 ### STEP 3. "Uses descriptive activity names to name the activities in the data set" 
 Activity names from `activity_labels.txt` file were assigned using gsub() function.
 
@@ -82,12 +82,14 @@ Activity names from `activity_labels.txt` file were assigned using gsub() functi
 	* `tBodyAcc-mean()-X` was transformed to `timeBodyAccelerationMeanX`
 	* `fBodyBodyGyroJerkMag-std()` was transformed to `frequencyBodyGyroscopeJerkMagnitudeStandardDeviation`
 
-
 After the above mentioned tranformations the data set has 10299 rows (observations) and 68 columns (variables).
+
 
 ### STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
 
-First, `dplyr()` package was used: function `group_by()` to group the data by both subject and activity; and then function `summarise_each()` to calculate the average of each variable for each activity and each subject.
+First, `dplyr()` package was used: function `group_by()` to group the data by both subject and activity.
+Then function `summarise_each()` to calculate the average of each variable for each activity and each subject.
+
 The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (`subject`, `activity` and 66 extracted features/variables).
 
 Second, the result of the first part was saved to a new file `course-project.txt` in the working direcory using `write.table()` function.
