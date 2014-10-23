@@ -11,7 +11,7 @@ The R script `run_analysis.R` does the following:
 
 ### STEP 1. "Merges the training and the test sets to create one data set."
 
-Read in the data from files using `read.table()` function: 
+* Read in the data from files using `read.table()` function: 
 	* measurement: `X_train.txt`, `X_test.txt` and row-bind using `rbind()` function.
 	* activity: `Y_train.txt`, `Y_test.txt` and row-bind using `rbind()` function.
 	* subject: `subject_train.txt`, `subject_test.txt` and row-bind using `rbind()` function.
