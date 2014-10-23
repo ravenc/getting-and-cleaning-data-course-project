@@ -83,7 +83,7 @@ After the above mentioned tranformations the data set has 10299 rows (observatio
 ## STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
 
 First, `dplyr()` package was used: function `group_by()` to group the data by both subject and activity; and then function `summarise_each()` to calculate the average of each variable for each activity and each subject.
-The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (subject, activity and 66 extracted features/variables).
+The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (`subject`, `activity` and 66 extracted features/variables).
 
 Second, the result of the first part was saved to a new file `course-project.txt` in the working direcory using `write.table()` function.
 
