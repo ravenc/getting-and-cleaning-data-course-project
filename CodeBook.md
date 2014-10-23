@@ -1,15 +1,15 @@
 # Coursera Getting and Cleaning Data class
 
 ## Course Project Codebook
-=========================
 
 
-The original study data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. (A full description of the study is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones .)
-It was unpacked to the working R directory.
 
-The R script "run_analysis.R" does the following:
+* The original study data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. (A full description of the study is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones .)
+* It was unpacked to the working R directory.
 
-STEP 1. "Merges the training and the test sets to create one data set."
+*The R script "run_analysis.R" does the following:
+
+* STEP 1. "Merges the training and the test sets to create one data set."
 
 First, the corresponding data files are read into R using read.table() function and asigned to "train" and "test" objects, accordingly.
 Second, the two objects/dataframes are merged into one, named "united", using rbind() function.
@@ -18,7 +18,7 @@ Second, the two objects/dataframes are merged into one, named "united", using rb
 Read in the data from files: X_train, X_test, Y_train, Y_test, features.txt, activities.txt, 
 
 The first variable "subject" is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
-The second variable "activity" is the activity performed by the subject. There are six types of activity:  
+* The second variable "activity" is the activity performed by the subject. There are six types of activity:  
 	* Walking
 	* Walking Upstairs
 	* Walking Downstairs
