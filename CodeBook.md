@@ -29,7 +29,7 @@ Mean and standard deviation measurments there extracted using `subset()` and `gr
 66 features were extracted, out of a total of 561.
 
 
-##### Variables
+#### Variables
 
 There are 68 variables in the new set:
 * The first variable `subject` is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
@@ -93,7 +93,7 @@ Then function `summarise_each()` to calculate the average of each variable for e
 
 The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (`subject`, `activity` and 66 extracted features/variables).
 
-Second, the result of the first part was saved to a new file `course-project.txt` in the working direcory using `write.table()` function.
+Second, the set was saved to a new file `course-project.txt` in the working direcory using `write.table()` function.
 
 
 #### Reading in the new tidy file and R script
