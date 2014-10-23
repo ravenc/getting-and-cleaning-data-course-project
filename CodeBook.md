@@ -30,7 +30,7 @@ Mean and standard deviation measurments there extracted using `subset()` and `gr
 
 ### Variables
 
-* There are 68 variables in the new set:
+There are 68 variables in the new set:
 * The first variable `subject` is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
 
 * The second variable `activity` is the activity performed by the subject. There are six types of activities:  
