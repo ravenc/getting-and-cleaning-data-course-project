@@ -17,7 +17,20 @@ Second, the two objects/dataframes are merged into one, named `united`, using `r
 
 Read in the data from files: `X_train`, `X_test`, `Y_train`, `Y_test`, `features.txt`, `activities.txt`, 
 
+
+### STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
+
+Mean and standard deviation measurments there extracted using `subset()` and `grepl()` functions.
+
+1. `meanFreq` measurements, such as `fBodyAcc-meanFreq()-X` and `fBodyGyro-meanFreq()-Y`, defined in the original study `features_info.txt` file as "weighted average of the frequency components to obtain a mean frequency" were not extracted because, in my understanding, these are different from mean variables.
+1. `angle` measurements, such as `angle(tBodyAccMean,gravity)` and `angle(X,gravityMean)`,  defined in the original study `features_info.txt` file as "angle between to vectors" were not extracted because, in my understanding, these are different from mean variables.
+
+66 features were extracted, out of a total of 561.
+
+
 ### Variables
+
+* There are 68 variables in the new set:
 * The first variable `subject` is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
 
 * The second variable `activity` is the activity performed by the subject. There are six types of activities:  
@@ -28,7 +41,7 @@ Read in the data from files: `X_train`, `X_test`, `Y_train`, `Y_test`, `features
 	* Standing
 	* Laying
 
-* The remaining 66 variables are the extracted measurements on the mean and standard deviation for each measurment (named as in the original study `features_info.txt` file): 
+* The remaining 66 variables are the extracted measurements on the mean and standard deviation for each measurment (named here as in the original study `features_info.txt` file, but later renamed, see STEP 3 below): 
 	* tBodyAcc-XYZ
 	* tGravityAcc-XYZ
 	* tBodyAccJerk-XYZ
@@ -49,16 +62,6 @@ Read in the data from files: `X_train`, `X_test`, `Y_train`, `Y_test`, `features
 
 where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-
-
-### STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
-
-Mean and standard deviation measurments there extracted using `subset()` and `grepl()` functions.
-
-1. `meanFreq` measurements, such as `fBodyAcc-meanFreq()-X` and `fBodyGyro-meanFreq()-Y`, defined in the original study `features_info.txt` file as "weighted average of the frequency components to obtain a mean frequency" were not extracted because, in my understanding, these are different from mean variables.
-1. `angle` measurements, such as `angle(tBodyAccMean,gravity)` and `angle(X,gravityMean)`,  defined in the original study `features_info.txt` file as "angle between to vectors" were not extracted because, in my understanding, these are different from mean variables.
-
-66 features were extracted, out of a total of 561.
 
 
 ### STEP 3. "Uses descriptive activity names to name the activities in the data set" 
