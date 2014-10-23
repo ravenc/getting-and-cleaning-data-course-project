@@ -3,7 +3,7 @@ train <- read.table("UCI HAR Dataset\\train\\X_train.txt")
 test <- read.table("UCI HAR Dataset\\test\\X_test.txt")
 united <- rbind(train, test)
 
-### Read in the features and activity labels and assign them to new objects "feat" and "activity", accordingly.
+### Read in the features and activity names/labels and assign them to new objects "feat" and "activity", accordingly.
 feat <- read.table("UCI HAR Dataset\\features.txt")
 activity <- read.table("UCI HAR Dataset\\activity_labels.txt")
 
