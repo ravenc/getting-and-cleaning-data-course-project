@@ -53,8 +53,8 @@ STEP 2. "Extracts only the measurements on the mean and standard deviation for e
 
 Mean and standard deviation measurments there extracted using subset() and grepl() functions.
 
-	* "meanFreq" measurements, such as "fBodyAcc-meanFreq()-X" and "fBodyGyro-meanFreq()-Y", defined in the original study "features_info.txt" file as "weighted average of the frequency components to obtain a mean frequency" were not extracted because, in my understanding, these are different from mean variables.
-	* "angle" measurements, such as "angle(tBodyAccMean,gravity)" and "angle(X,gravityMean)",  defined in the original study "features_info.txt" file as "angle between to vectors" were not extracted because, in my understanding, these are different from mean variables.
+1. "meanFreq" measurements, such as "fBodyAcc-meanFreq()-X" and "fBodyGyro-meanFreq()-Y", defined in the original study "features_info.txt" file as "weighted average of the frequency components to obtain a mean frequency" were not extracted because, in my understanding, these are different from mean variables.
+1. "angle" measurements, such as "angle(tBodyAccMean,gravity)" and "angle(X,gravityMean)",  defined in the original study "features_info.txt" file as "angle between to vectors" were not extracted because, in my understanding, these are different from mean variables.
 
 66 features were extracted, out of a total of 561.
 
@@ -63,16 +63,16 @@ STEP 3. "Uses descriptive activity names to name the activities in the data set"
 Activity names from "activity_labels.txt" file were assigned using gsub() function.
 
 
-STEP 4. "Appropriately labels the data set with descriptive variable names" 
+==STEP 4. "Appropriately labels the data set with descriptive variable names" 
 The following naming convention was followed:
-	1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' reccommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
-	2. CamelCase (my prefered way for easier readability);
-	3. "BodyBody" was changed to "Body";
-	3. No white spaces, underscores, parenthesis or hyphens.
+1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' reccommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
+1. CamelCase (my prefered way for easier readability);
+1. "BodyBody" was changed to "Body";
+1. No white spaces, underscores, parenthesis or hyphens.
 
 gsub() function (with regular expression pattern replacement) was used to make the needed variable names' transformations.
 
-Examples:
+* Examples:
 	* 'tBodyAcc-mean()-X' was transformed to "timeBodyAccelerationMeanX"
 	* "fBodyBodyGyroJerkMag-std()" was transformed to "frequencyBodyGyroscopeJerkMagnitudeStandardDeviation"
 
