@@ -2,9 +2,10 @@
 
 ## Course Project Codebook
 
-
-The original study data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. (A full description of the study is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones .)
-It was unpacked to the working R directory.
+The original data comes from Human Activity Recognition database built from the recordings of 30 subjects performing 6 types of activities while wearing a waist-mounted Samsung smartphone with embedded accelerometer and gyroscope sensors.
+The data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. 
+A full description of the study is available here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+The donwloaded dataset was unzipped to the working R directory.
 
 The R script `run_analysis.R` does the following:
 
