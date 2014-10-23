@@ -1,6 +1,6 @@
-# Coursera Getting and Cleaning Data class
+## Coursera Getting and Cleaning Data class
 
-## Course Project Codebook
+### Course Project Codebook
 
 The original data comes from Human Activity Recognition database built from the recordings of 30 subjects performing 6 types of activities while wearing a waist-mounted Samsung smartphone with embedded accelerometer and gyroscope sensors.
 The data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. 
@@ -9,7 +9,7 @@ The donwloaded dataset was unzipped to the working R directory.
 
 The R script `run_analysis.R` does the following:
 
-## STEP 1. "Merges the training and the test sets to create one data set."
+### STEP 1. "Merges the training and the test sets to create one data set."
 
 First, the corresponding data files are read into R using `read.table()` function and asigned to `train` and `test` objects, accordingly.
 Second, the two objects/dataframes are merged into one, named `united`, using `rbind()` function.
@@ -17,6 +17,7 @@ Second, the two objects/dataframes are merged into one, named `united`, using `r
 
 Read in the data from files: `X_train`, `X_test`, `Y_train`, `Y_test`, `features.txt`, `activities.txt`, 
 
+### Variables
 * The first variable `subject` is the number of the subject who performed the activity. There are 30 subjects, numbered from "1" to "30".
 
 * The second variable `activity` is the activity performed by the subject. There are six types of activities:  
@@ -50,7 +51,7 @@ where '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 
 
-## STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
+### STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
 
 Mean and standard deviation measurments there extracted using `subset()` and `grepl()` functions.
 
@@ -60,11 +61,11 @@ Mean and standard deviation measurments there extracted using `subset()` and `gr
 66 features were extracted, out of a total of 561.
 
 
-## STEP 3. "Uses descriptive activity names to name the activities in the data set" 
+### STEP 3. "Uses descriptive activity names to name the activities in the data set" 
 Activity names from `activity_labels.txt` file were assigned using gsub() function.
 
 
-## STEP 4. "Appropriately labels the data set with descriptive variable names" 
+### STEP 4. "Appropriately labels the data set with descriptive variable names" 
 
 * The following naming convention was followed:
 1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' reccommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
@@ -81,7 +82,7 @@ Activity names from `activity_labels.txt` file were assigned using gsub() functi
 
 After the above mentioned tranformations the data set has 10299 rows (observations) and 68 columns (variables).
 
-## STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
+### STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
 
 First, `dplyr()` package was used: function `group_by()` to group the data by both subject and activity; and then function `summarise_each()` to calculate the average of each variable for each activity and each subject.
 The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (`subject`, `activity` and 66 extracted features/variables).
