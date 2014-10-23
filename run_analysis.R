@@ -61,4 +61,4 @@ ave <- summarise_each(by_s_a, funs(mean))
 write.table(ave, file="course-project.txt")
 
 ### The new tidy dataset can be read into R using the following code:
-# data <- read.table("course-project.txt")
+### data <- read.table("course-project.txt")
