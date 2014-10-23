@@ -3,11 +3,10 @@
 ## Course Project Codebook
 
 
+The original study data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. (A full description of the study is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones .)
+It was unpacked to the working R directory.
 
-* The original study data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. (A full description of the study is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones .)
-* It was unpacked to the working R directory.
-
-* The R script "run_analysis.R" does the following:
+The R script "run_analysis.R" does the following:
 
 * STEP 1. "Merges the training and the test sets to create one data set."
 
@@ -59,11 +58,11 @@ Mean and standard deviation measurments there extracted using subset() and grepl
 66 features were extracted, out of a total of 561.
 
 
-STEP 3. "Uses descriptive activity names to name the activities in the data set" 
+## STEP 3. "Uses descriptive activity names to name the activities in the data set" 
 Activity names from "activity_labels.txt" file were assigned using gsub() function.
 
 
-==STEP 4. "Appropriately labels the data set with descriptive variable names" 
+## STEP 4. "Appropriately labels the data set with descriptive variable names" 
 The following naming convention was followed:
 1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' reccommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
 1. CamelCase (my prefered way for easier readability);
@@ -79,13 +78,14 @@ gsub() function (with regular expression pattern replacement) was used to make t
 
 After the above mentioned tranformations the data set has 10299 rows (observations) and 68 columns (variables).
 
-STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
+## STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
 
 First, dplyr() package was used: function group_by() to group the data by both subject and activity; and then function summarise_each() to calculate the average of each variable for each activity and each subject.
 The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (subject, activity and 66 extracted features/variables).
 
 Second, the result of the first part was saved to a new file "course-project.txt" in the working direcory using write.table() function.
 
+===
 
 The new tidy set file "course-project.txt" can be read into R using read.table("course-project.txt").
 The R script can be downloaded to your computer's R working directory and then can run it by the following command: source(".\\run_analysis.R").
