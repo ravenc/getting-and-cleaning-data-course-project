@@ -27,4 +27,4 @@ Note: Explanation of step 3 and 4 transformations, which required subjective jud
 
 CodeBook
 ========
-File CodeBook.md gives a description of the variables, the data and the transformations made to clean up the data.
+CodeBook.md gives a description of the variables, the data and the transformations made to clean up the data.
