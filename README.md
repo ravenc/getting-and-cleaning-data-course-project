@@ -4,12 +4,12 @@
 
 This repository contains output files for Coursera Getting and Cleaning Data Course Project.
 
-## Tidy dataset
+## 1. Tidy dataset
 
 The tidy dataset `course-project.txt` can be read into R using `read.table()` function.
 
 
-## R scipt `run_analysis.R`
+## 1. R scipt `run_analysis.R`
 
 The script can be run using `source()` function.
 
@@ -28,6 +28,6 @@ Note: Explanation of steps 3 and 4 transformations, which required subjective ju
 
 A detailed step by step description of the code can be found in the script file `run_analysis.R` itself.
 
-## CodeBook
+## 1. CodeBook
 
 `CodeBook.md` gives a description of the variables, the data and the transformations made to clean up the data.
