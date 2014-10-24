@@ -17,11 +17,10 @@ s_train <- read.table("UCI HAR Dataset\\train\\subject_train.txt")
 s_test <- read.table("UCI HAR Dataset\\test\\subject_test.txt")
 s_united <- rbind(s_train, s_test)
 
-### Choose only a subset of features from "feat" based on regex "mean\\()|std" and assign it to 
-# a new object "subsetted".
-subsetted <- subset(feat, grepl("mean\\()|std", feat$V2))
+### Choose only a subset of features from "feat" based on regex "mean\\()|std".
+feat <- subset(feat, grepl("mean\\()|std", feat$V2))
 ### choose only the first column with features' numbers and assign to a new vector "colno".
-colno <- as.vector(subsetted[,1])
+colno <- as.vector(feat[,1])
 ### subset the combined measurement dataframe "united" by using subsetted features numbers "colno".
 united <- united[, colno]
 
@@ -39,7 +38,7 @@ tidyset <- cbind(s_united, y_united, united)
 
 ### STEP 4. Appropriately label the data set with descriptive variable names following a naming 
 ### convention described in the Codebook.md
-names(tidyset) <- c("subject", "activity", as.vector(subsetted[,2]))
+names(tidyset) <- c("subject", "activity", as.vector(feat[,2]))
 names(tidyset) <- gsub("^([A-Za-z]+)-([A-Za-z]+)\\(\\)-?([A-Za-z]?)", "\\1\\2\\3", names(tidyset), perl=T)
 names(tidyset) <- gsub("^t", "time", names(tidyset))
 names(tidyset) <- gsub("^f", "frequency", names(tidyset))
