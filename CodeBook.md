@@ -97,5 +97,5 @@ Second, the set was saved to a new file `course-project.txt` in the working dire
 
 #### Reading in the new tidy file and R script
 
-The new tidy set file `course-project.txt` can be read into R using `read.table("course-project.txt")`.
+The new tidy set file `course-project.txt` can be read into R using `read.table("course-project.txt", header=T)`.
 The R script can be downloaded to your computer's R working directory and then can run it by the following command: `source('./run_analysis.R')`.
