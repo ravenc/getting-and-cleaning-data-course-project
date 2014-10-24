@@ -1,24 +1,24 @@
 # Coursera Getting and cleaning data Course Project
 
 
-
 This repository contains output files for Coursera Getting and Cleaning Data Course Project.
 
-### 1. README.md
+#### Prerequisites:
+1. It is assumed that the original study dataset is already downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzipped into the working R directory.
+1. The script uses a dplyr package. If the package is missing, it has to be downloaded and installed using `install.packages()` function.
 
+The following make up the project output files:
+------
+### 1. README.md
+This file itself.
 
 ### 2. Tidy dataset
 
 The tidy dataset `course-project.txt` can be read into R using `read.table()` function.
 
-
 ### 3. R scipt `run_analysis.R`
 
 The script can be run using `source()` function.
-
-##### Prerequisites:
-1. It is assumed that the original study dataset is already downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and unzipped into the working R directory.
-1. The script uses a dplyr package. If the package is missing, it has to be downloaded and installed using `install.packages()` function.
 
 ##### The script contains the code needed to perform a 5 step data transformation, as described in the project assignment: 
 1. Merges the training and the test sets to create one data set.
