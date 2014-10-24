@@ -57,7 +57,7 @@ by_s_a <- group_by(tidyset, subject, activity)
 ### calculate the mean of each variable for each subject and each activity and assign to "ave"
 ave <- summarise_each(by_s_a, funs(mean))
 ### save the "ave" object to file named "course-project.txt"
-write.table(ave, file="course-project.txt", row.name=FALSE)
+write.table(ave, file="CourseProject.txt", row.name=FALSE)
 
 ### The new tidy dataset can be read into R using the following code:
-### data <- read.table("course-project.txt", header=T)
+### data <- read.table("CourseProject.txt", header=T)
