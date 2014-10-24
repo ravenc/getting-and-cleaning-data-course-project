@@ -5,7 +5,7 @@
 The original data comes from Human Activity Recognition database built from the recordings of 30 subjects performing 6 types of activities while wearing a waist-mounted Samsung smartphone with embedded accelerometer and gyroscope sensors.
 The data was downloaded from the link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. 
 A full description of the study is available here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
-The donwloaded dataset was unzipped to the working R directory.
+The downloaded data set was unzipped to the working R directory.
 
 The R script `run_analysis.R` does the following:
 
@@ -20,7 +20,7 @@ The R script `run_analysis.R` does the following:
 
 #### STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
 
-Mean and standard deviation measurments there extracted using `subset()` and `grepl()` functions.
+Mean and standard deviation measurements there extracted using `subset()` and `grepl()` functions.
 
 1. `meanFreq` measurements, such as `fBodyAcc-meanFreq()-X` and `fBodyGyro-meanFreq()-Y`, defined in the original study `features_info.txt` file as "weighted average of the frequency components to obtain a mean frequency" were not extracted because, in my understanding, these are different from mean variables.
 1. `angle` measurements, such as `angle(tBodyAccMean,gravity)` and `angle(X,gravityMean)`,  defined in the original study `features_info.txt` file as "angle between to vectors" were not extracted because, in my understanding, these are different from mean variables.
@@ -41,7 +41,7 @@ There are 68 variables in the new set:
 	* Standing
 	* Laying
 
-* The remaining 66 variables are the extracted measurements on the mean and standard deviation for each measurment (named here as in the original study `features_info.txt` file, but later renamed, see STEP 3 below): 
+* The remaining 66 variables are the extracted measurements on the mean and standard deviation for each measurement (named here as in the original study `features_info.txt` file, but later renamed, see STEP 3 below): 
 	* tBodyAcc-XYZ
 	* tGravityAcc-XYZ
 	* tBodyAccJerk-XYZ
@@ -71,8 +71,8 @@ Activity names from `activity_labels.txt` file were assigned using gsub() functi
 
 #### Naming convention
 * The following naming convention was followed:
-1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' reccommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
-1. CamelCase (my prefered way for easier readability);
+1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' recommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
+1. CamelCase (my preferred way for easier readability);
 1. `BodyBody` was changed to `Body`;
 1. No white spaces, underscores, parenthesis or hyphens.
 
@@ -82,7 +82,7 @@ Activity names from `activity_labels.txt` file were assigned using gsub() functi
 	* `tBodyAcc-mean()-X` was transformed to `timeBodyAccelerationMeanX`
 	* `fBodyBodyGyroJerkMag-std()` was transformed to `frequencyBodyGyroscopeJerkMagnitudeStandardDeviation`
 
-After the above mentioned tranformations the data set has 10299 rows (observations) and 68 columns (variables).
+After the above mentioned transformations the data set has 10299 rows (observations) and 68 columns (variables).
 
 
 #### STEP 5. "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
@@ -92,7 +92,7 @@ Then function `summarise_each()` to calculate the average of each variable for e
 
 The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (`subject`, `activity` and 66 extracted features/variables).
 
-Second, the set was saved to a new file `course-project.txt` in the working direcory using `write.table()` function.
+Second, the set was saved to a new file `course-project.txt` in the working directory using `write.table()` function.
 
 
 #### Reading in the new tidy file and R script
