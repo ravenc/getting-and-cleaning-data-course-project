@@ -14,7 +14,7 @@ This file itself.
 
 ### 2. Tidy dataset
 
-The tidy dataset `course-project.txt` can be read into R using `read.table()` function with parameter "header=T".
+The tidy dataset `CourseProject.txt` can be read into R using `read.table()` function with parameter "header=T".
 
 ### 3. R scipt `run_analysis.R`
 
