@@ -92,7 +92,7 @@ Then function `summarise_each()` to calculate the average of each variable for e
 
 The resulting set has 180 rows (30 subjects * 6 activities) and 68 columns (`subject`, `activity` and 66 extracted features/variables).
 
-Second, the set was saved to a new file `course-project.txt` in the working directory using `write.table()` function.
+Second, the set was saved to a new file `CourseProject.txt` in the working directory using `write.table()` function.
 
 
 #### Reading in the new tidy file and R script
