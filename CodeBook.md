@@ -18,7 +18,6 @@ The R script `run_analysis.R` does the following:
 	* features `features.txt` 
 	* activity names `activities.txt` 
 
-
 #### STEP 2. "Extracts only the measurements on the mean and standard deviation for each measurement."
 
 Mean and standard deviation measurments there extracted using `subset()` and `grepl()` functions.
