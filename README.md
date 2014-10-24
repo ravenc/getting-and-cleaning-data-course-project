@@ -1,5 +1,4 @@
-Coursera Getting and cleaning data Course Project
-========================================
+# Coursera Getting and cleaning data Course Project
 
 
 
@@ -27,6 +26,7 @@ The script can be run using `source()` function.
 
 Note: Explanation of steps 3 and 4 transformations, which required subjective judgment/discretion, is given in the CodeBook.
 
+A detailed step by step description of the code can be found in the script file `run_analysis.R` itself.
 
 ## CodeBook
 
