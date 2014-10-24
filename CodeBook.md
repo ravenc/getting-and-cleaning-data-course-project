@@ -69,7 +69,7 @@ Activity names from `activity_labels.txt` file were assigned using gsub() functi
 
 #### STEP 4. "Appropriately labels the data set with descriptive variable names" 
 
-##### Naming convention
+#### Naming convention
 * The following naming convention was followed:
 1. The variable names are descriptive, full words, not abbreviations (as per week 4 lecture, also CTAs' reccommendations in the class discussion forum: https://class.coursera.org/getdata-008/forum/thread?thread_id=131);
 1. CamelCase (my prefered way for easier readability);
